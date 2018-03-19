@@ -78,7 +78,6 @@
                     android:layout_gravity="center"
                     android:textColor="#434343"
                     android:textSize="10sp"/>
-                <!--android:text="西安"-->
 
                 <ImageView
                     android:layout_width="14dp"
@@ -94,7 +93,6 @@
                     android:layout_gravity="center"
                     android:textColor="#434343"
                     android:textSize="10sp"/>
-                <!--android:text="西安邮电大学"-->
 
             </LinearLayout>
 
