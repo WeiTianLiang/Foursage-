@@ -45,7 +45,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginLeft="17dp"/>
-                <!--                    android:src="@mipmap/boy"-->
 
                 <TextView
                     android:id="@+id/detailer_age"
@@ -55,7 +54,6 @@
                     android:layout_marginLeft="3dp"
                     android:textColor="#286fd2"
                     android:textSize="17sp"/>
-                <!--                    android:text="19"-->
 
             </LinearLayout>
 
