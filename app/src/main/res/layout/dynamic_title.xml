@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dynamictitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#82FFF0">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/Dynamic_Recommend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#E51C23"/>
+
+        <ImageView
+            android:id="@+id/Dynamic_Recommend_skip"
+            android:layout_width="38dp"
+            android:layout_height="5dp"
+            android:background="@drawable/skip_line"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Dynamic_Follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#343434"/>
+
+        <ImageView
+            android:id="@+id/Dynamic_Follow_skip"
+            android:layout_width="38dp"
+            android:layout_height="5dp"
+            android:background="@drawable/skip_line"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Dynamic_City"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="同城"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#343434"/>
+
+        <ImageView
+            android:id="@+id/Dynamic_City_skip"
+            android:layout_width="38dp"
+            android:layout_height="5dp"
+            android:background="@drawable/skip_line"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Dynamic_All"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全部"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:textSize="20sp"
+            android:textColor="#343434"/>
+
+        <ImageView
+            android:id="@+id/Dynamic_All_skip"
+            android:layout_width="38dp"
+            android:layout_height="5dp"
+            android:background="@drawable/skip_line"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/dynamic_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dynamictitle"/>
+
+    <FrameLayout
+        android:id="@+id/dynamic_Flow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dynamictitle">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/dynamic_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:fabSize="normal"
+            app:rippleColor="#35e49b"
+            android:layout_margin="16dp"
+            android:backgroundTint="#37acf5"
+            android:src="@mipmap/edit_add"
+            android:elevation="8dp"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

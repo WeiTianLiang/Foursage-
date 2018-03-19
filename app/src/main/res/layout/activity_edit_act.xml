@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wtl.foursage20.Activity.EditActActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#4FE8E8">
+
+        <ImageView
+            android:id="@+id/edit_act_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/editback2"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编辑活动"
+            android:textSize="22sp"
+            android:layout_weight="6"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="7dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7dp"
+                android:orientation="horizontal"
+                android:gravity="right">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动发起者"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.28"
+                    android:textSize="17sp"
+                    android:textColor="#454545"
+                    android:layout_marginLeft="10dp"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/edit_acter_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:src="@mipmap/act_head"/>
+                <!--android:src="@mipmap/act_head"-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/edit_acter_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#4d4d4d"
+                            android:textSize="18sp"
+                            android:text="社会明"/>
+                        <!-- android:text="社会明"-->
+
+                        <ImageView
+                            android:id="@+id/edit_acter_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/boy" />
+                        <!--                    android:src="@mipmap/boy"-->
+
+                        <TextView
+                            android:id="@+id/edit_acter_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#286fd2"
+                            android:textSize="17sp"
+                            android:text="19"/>
+                        <!--                    android:text="19"-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/local" />
+
+                        <TextView
+                            android:id="@+id/edit_acter_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#434343"
+                            android:textSize="12sp"
+                            android:text="西安"/>
+                        <!--android:text="西安"-->
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:src="@mipmap/school" />
+
+                        <TextView
+                            android:id="@+id/edit_acter_university"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#434343"
+                            android:textSize="12sp"
+                            android:text="西安邮电大学"/>
+                        <!--android:text="西安邮电大学"-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动名称"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:textSize="17sp"
+                    android:textColor="#454545"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/edit_act_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/edit_act_select"
+                    android:hint="单行输入"
+                    android:padding="6dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动类别"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:textSize="17sp"
+                    android:textColor="#454545"
+                    android:layout_marginLeft="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:layout_marginRight="15dp"
+                    android:padding="6dp"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/edit_act_select">
+
+                    <Spinner
+                        android:id="@+id/edit_act_class"
+                        android:layout_width="match_parent"
+                        android:layout_height ="match_parent"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动时间"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:textSize="17sp"
+                    android:textColor="#454545"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/edit_act_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/edit_act_select"
+                    android:hint="单行输入"
+                    android:padding="6dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动人数"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:textSize="17sp"
+                    android:textColor="#454545"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/edit_act_numb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="8"
+                    android:background="@drawable/edit_act_select"
+                    android:hint="小于10人"
+                    android:padding="6dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动地点"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:textSize="17sp"
+                    android:textColor="#454545"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/edit_act_locate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/edit_act_select"
+                    android:hint="具体位置"
+                    android:padding="6dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="活动描述"
+                    android:textSize="17sp"
+                    android:textColor="#454545"
+                    android:layout_marginLeft="10dp"/>
+
+                <EditText
+                    android:id="@+id/edit_act_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_act_select"
+                    android:hint="不得超过100字"
+                    android:gravity="top"
+                    android:padding="6dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="添加图片(不得超过三张)"
+                    android:textColor="#454545"
+                    android:textSize="17sp" />
+
+                <EditText
+                    android:id="@+id/edit_act_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_act"
+                    android:hint="不得超过100字"
+                    android:padding="6dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <Button
+                    android:id="@+id/edit_Publish_button"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="发 布"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#606060"
+                    android:background="@drawable/edit_button"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
