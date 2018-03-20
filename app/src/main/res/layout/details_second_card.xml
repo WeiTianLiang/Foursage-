@@ -8,7 +8,7 @@
         android:id="@+id/detailer_sec_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000"
+        android:textColor="#35d467"
         android:textStyle="bold"/>
 
     <TextView
@@ -20,7 +20,7 @@
         android:id="@+id/back_detailer_sec_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000"
+        android:textColor="#35d467"
         android:textStyle="bold"/>
 
     <TextView
@@ -33,6 +33,6 @@
         android:id="@+id/back_detailer_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#646464"/>
+        android:textColor="#494949"/>
 
 </LinearLayout>
