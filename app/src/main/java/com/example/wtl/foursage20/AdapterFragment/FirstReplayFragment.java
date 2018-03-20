@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.wtl.foursage20.Activity.DetailsActActivity;
 import com.example.wtl.foursage20.Adapter.ReplayAdapter;
 import com.example.wtl.foursage20.Class.Replay;
 import com.example.wtl.foursage20.R;

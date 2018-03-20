@@ -507,22 +507,35 @@
         android:id="@+id/mes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="#d1d1d1">
 
         <EditText
             android:id="@+id/details_talk_message"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginBottom="3dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="3dp"
             android:layout_weight="8"
             android:background="@drawable/comment_background_out"
             android:hint="说点什么吧~~"
             android:inputType="text"
-            android:padding="6dp"
-            android:textSize="15sp" />
+            android:padding="8dp"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/details_talk_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="发送"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
