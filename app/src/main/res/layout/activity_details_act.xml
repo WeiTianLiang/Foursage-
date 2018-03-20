@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wtl.foursage20.Activity.DetailsActActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.example.wtl.foursage20.Activity.DetailsActActivity">
 
     <FrameLayout
+        android:id="@+id/details_title"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="#4FE8E8">
@@ -15,140 +16,38 @@
             android:id="@+id/details_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@mipmap/editback2"
             android:layout_gravity="left|center"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/editback2" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="活动详情"
-            android:textSize="22sp"
+            android:layout_gravity="center"
             android:layout_weight="6"
+            android:text="活动详情"
             android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:layout_gravity="center"/>
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/details_push"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="发布"
-            android:src="@mipmap/share"
             android:layout_gravity="right|center"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/share"
+            android:text="发布" />
 
     </FrameLayout>
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/details_scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="7dp"
-            android:orientation="horizontal">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/details_acter_head"
-                android:layout_width="50dp"
-                android:layout_height="50dp"/>
-            <!--android:src="@mipmap/act_head"-->
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="7dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/details_acter_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#000000"
-                        android:textSize="16sp"
-                        android:textStyle="bold"/>
-                    <!-- android:text="社会明"-->
-
-                    <ImageView
-                        android:id="@+id/details_acter_sex"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="17dp"/>
-                    <!--                    android:src="@mipmap/boy"-->
-
-                    <TextView
-                        android:id="@+id/details_acter_age"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="3dp"
-                        android:textColor="#286fd2"
-                        android:textSize="17sp"/>
-                    <!--                    android:text="19"-->
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:layout_gravity="center"
-                        android:src="@mipmap/local" />
-
-                    <TextView
-                        android:id="@+id/details_acter_city"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#434343"
-                        android:textSize="10sp"/>
-                    <!--android:text="西安"-->
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:src="@mipmap/school" />
-
-                    <TextView
-                        android:id="@+id/details_acter_university"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="#434343"
-                        android:textSize="10sp"/>
-                    <!--android:text="西安邮电大学"-->
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#bbbbbb" />
+        android:layout_below="@+id/details_title"
+        android:layout_above="@+id/mes">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -157,153 +56,96 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="活动名称:"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/details_act_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:textSize="16sp" />
-                <!--android:text="找人打羽毛球"-->
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="活动类型:"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/details_act_type"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:textSize="16sp" />
-                <!--android:text="体育运动"-->
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="开始时间:"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/details_act_begin_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:textSize="16sp" />
-                <!--android:text="2018年3月4日  13:00"-->
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:text="活动地点:"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/details_act_place"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:textSize="16sp" />
-                <!--android:text="西安邮电大学羽毛球场"-->
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
-                android:background="#bbbbbb" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="活动详情:"
-                    android:textSize="16sp"
-                    android:layout_marginLeft="10dp"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/details_acter_head"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <!--android:src="@mipmap/act_head"-->
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/detailed_content"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
-                        android:layout_marginRight="15dp"/>
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="7dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/details_acter_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                        <!-- android:text="社会明"-->
+
+                        <ImageView
+                            android:id="@+id/details_acter_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="17dp" />
+                        <!--                    android:src="@mipmap/boy"-->
+
+                        <TextView
+                            android:id="@+id/details_acter_age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="3dp"
+                            android:textColor="#286fd2"
+                            android:textSize="17sp" />
+                        <!--                    android:text="19"-->
+
+                    </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
 
                         <ImageView
-                            android:id="@+id/detailed_picture1"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:layout_marginTop="10dp"
-                            android:visibility="gone"/>
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/local" />
+
+                        <TextView
+                            android:id="@+id/details_acter_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#434343"
+                            android:textSize="10sp" />
+                        <!--android:text="西安"-->
 
                         <ImageView
-                            android:id="@+id/detailed_picture2"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="15dp"
-                            android:visibility="gone"/>
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:src="@mipmap/school" />
 
-                        <ImageView
-                            android:id="@+id/detailed_picture3"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="15dp"
-                            android:visibility="gone"/>
+                        <TextView
+                            android:id="@+id/details_acter_university"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="#434343"
+                            android:textSize="10sp" />
+                        <!--android:text="西安邮电大学"-->
 
                     </LinearLayout>
 
@@ -314,7 +156,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="12dp"
                 android:background="#bbbbbb" />
 
             <LinearLayout
@@ -324,7 +165,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1">
 
@@ -332,145 +173,147 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:text="已报名人数" />
+                        android:text="活动名称:"
+                        android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/details_now_people_number"
+                        android:id="@+id/details_act_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="25dp"
-                        android:textColor="#44e22c" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="/"
-                        android:textColor="#44e22c" />
-
-                    <TextView
-                        android:id="@+id/details_all_people_number"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="#44e22c" />
-                    <!--android:text="2"-->
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="right">
-
-                        <TextView
-                            android:id="@+id/madeteam"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="组队中"
-                            android:textColor="#39dc30"
-                            android:layout_marginRight="20dp"/>
-
-                    </LinearLayout>
+                        android:textSize="16sp" />
+                    <!--android:text="找人打羽毛球"-->
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
                     android:layout_marginTop="10dp"
-                    android:layout_weight="3">
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/details_join_head"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"/>
-                    <!--android:src="@mipmap/participate"-->
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="right">
-
-                        <ImageView
-                            android:id="@+id/details_add_people"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/addpeople"
-                            android:layout_marginRight="20dp"/>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="活动类型:"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/details_act_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="16sp" />
+                    <!--android:text="体育运动"-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="开始时间:"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/details_act_begin_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="16sp" />
+                    <!--android:text="2018年3月4日  13:00"-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="活动地点:"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/details_act_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:textSize="16sp" />
+                    <!--android:text="西安邮电大学羽毛球场"-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#bbbbbb" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="活动详情:"
+                        android:textSize="16sp" />
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center">
+                        android:layout_marginLeft="25dp"
+                        android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/detailed_content"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="浏览"
+                            android:layout_marginRight="15dp"
                             android:textSize="16sp" />
 
-                        <TextView
-                            android:id="@+id/details_look_number"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="15sp" />
-                        <!--android:text="100"-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="次"
-                            android:textSize="16sp" />
+                            <ImageView
+                                android:id="@+id/detailed_picture1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
 
-                    </LinearLayout>
+                            <ImageView
+                                android:id="@+id/detailed_picture2"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
 
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="40dp"
-                        android:gravity="right">
+                            <ImageView
+                                android:id="@+id/detailed_picture3"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:visibility="gone" />
 
-                        <ImageView
-                            android:id="@+id/details_act_good"
-                            android:layout_width="28dp"
-                            android:layout_height="28dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="5dp"
-                            android:src="@mipmap/act_good" />
-
-                        <TextView
-                            android:id="@+id/details_act_good_num"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginRight="10dp"/>
-                        <!--                        android:text="100"-->
-
-                        <ImageView
-                            android:id="@+id/details_act_message"
-                            android:layout_width="28dp"
-                            android:layout_height="28dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="1dp"
-                            android:src="@mipmap/act_message" />
-
-                        <TextView
-                            android:id="@+id/details_act_message_num"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginRight="10dp"/>
-                        <!--android:text="1300"-->
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -479,50 +322,208 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
                     android:background="#bbbbbb" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="已报名人数" />
+
+                        <TextView
+                            android:id="@+id/details_now_people_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:textColor="#44e22c" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"
+                            android:textColor="#44e22c" />
+
+                        <TextView
+                            android:id="@+id/details_all_people_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#44e22c" />
+                        <!--android:text="2"-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+
+                            <TextView
+                                android:id="@+id/madeteam"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:text="组队中"
+                                android:textColor="#39dc30" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="3">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/details_join_head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp" />
+                        <!--android:src="@mipmap/participate"-->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right">
+
+                            <ImageView
+                                android:id="@+id/details_add_people"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:src="@mipmap/addpeople" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="浏览"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/details_look_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="15sp" />
+                            <!--android:text="100"-->
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="次"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:gravity="right">
+
+                            <ImageView
+                                android:id="@+id/details_act_good"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:src="@mipmap/act_good" />
+
+                            <TextView
+                                android:id="@+id/details_act_good_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp" />
+                            <!--                        android:text="100"-->
+
+                            <ImageView
+                                android:id="@+id/details_act_message"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="1dp"
+                                android:src="@mipmap/act_message" />
+
+                            <TextView
+                                android:id="@+id/details_act_message_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="10dp" />
+                            <!--android:text="1300"-->
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#bbbbbb" />
+
+                    <FrameLayout
+                        android:id="@+id/reply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/mes" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/mes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/details_talk_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="3dp"
+            android:layout_weight="8"
+            android:background="@drawable/comment_background_out"
+            android:hint="说点什么吧~~"
+            android:inputType="text"
+            android:padding="6dp"
+            android:textSize="15sp" />
+
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <FrameLayout
-            android:id="@+id/reply"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/comment_background_out"
-            android:layout_alignParentBottom="true">
-
-            <EditText
-                android:id="@+id/details_talk_message"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="3dp"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="2dp"
-                android:layout_marginTop="3dp"
-                android:layout_weight="8"
-                android:background="@drawable/comment_background_in"
-                android:hint="说点什么吧~~"
-                android:inputType="text"
-                android:padding="6dp"
-                android:textSize="15sp" />
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
-</LinearLayout>
+</RelativeLayout>

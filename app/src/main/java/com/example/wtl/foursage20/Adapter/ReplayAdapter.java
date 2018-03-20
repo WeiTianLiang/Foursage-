@@ -33,7 +33,7 @@ public class ReplayAdapter extends RecyclerView.Adapter<ReplayAdapter.ViewHolder
 
     @Override
     public ReplayAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.details_card,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.details_card,null,false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
