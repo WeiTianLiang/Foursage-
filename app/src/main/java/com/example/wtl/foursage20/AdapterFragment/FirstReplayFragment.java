@@ -1,6 +1,5 @@
 package com.example.wtl.foursage20.AdapterFragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -10,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.wtl.foursage20.Activity.DetailsActActivity;
 import com.example.wtl.foursage20.Adapter.ReplayAdapter;
 import com.example.wtl.foursage20.Class.Replay;
 import com.example.wtl.foursage20.R;

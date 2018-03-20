@@ -16,7 +16,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.wtl.foursage20.Activity.EditActActivity;
 import com.example.wtl.foursage20.Activity.EditDynamicActivity;
 import com.example.wtl.foursage20.Activity.MainActivity;
 import com.example.wtl.foursage20.Adapter.Pager_Adapter;
