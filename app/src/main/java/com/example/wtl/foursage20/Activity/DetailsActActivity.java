@@ -15,6 +15,7 @@ import android.widget.ImageView;
 
 import com.example.wtl.foursage20.AdapterFragment.FirstReplayFragment;
 import com.example.wtl.foursage20.R;
+import com.example.wtl.foursage20.Tool.Soft_Keyboard_Tool;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -40,13 +41,15 @@ public class DetailsActActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_details_act);
         Montior();
         upload();
-        details_talk_message.setOnTouchListener(new View.OnTouchListener() {
+        Soft_Keyboard_Tool.setListener(DetailsActActivity.this, new Soft_Keyboard_Tool.OnSoftKeyBoardChangeListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if(event.getAction() == MotionEvent.ACTION_UP) {
-                    details_talk_button.setVisibility(View.VISIBLE);
-                }
-                return false;
+            public void keyBoardShow(int height) {
+                details_talk_button.setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void keyBoardHide(int height) {
+                details_talk_button.setVisibility(View.GONE);
             }
         });
     }
