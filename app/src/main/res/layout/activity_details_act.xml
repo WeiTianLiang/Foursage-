@@ -508,7 +508,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#e2e2e2"
+        android:background="#e9e9e9"
         android:orientation="horizontal"
         android:paddingBottom="2dp"
         android:paddingTop="2dp">
@@ -526,7 +526,8 @@
             android:hint="说点什么吧~~"
             android:inputType="text"
             android:padding="8dp"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:elevation="4dp"/>
 
         <Button
             android:id="@+id/details_talk_button"

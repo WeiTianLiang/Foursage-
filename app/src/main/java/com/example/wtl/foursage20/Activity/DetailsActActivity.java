@@ -100,8 +100,4 @@ public class DetailsActActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
-    /*
-    * 从edittext中读取数据
-    * */
-
 }
